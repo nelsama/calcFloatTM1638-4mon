@@ -9,6 +9,7 @@ Proporciona operaciones de punto flotante de 32 bits (4 bytes de mantisa + 1 byt
 - Conversión string ↔ float sin usar rutinas de string de MSBasic
 - Compatible con CC65
 - Formato de 5 bytes: `[exp][m1+sign][m2][m3][m4]`
+- Tamaño del código fuente: **~86 KB** (~47 KB solo float.s de MSBasic)
 
 ## Estructura
 
