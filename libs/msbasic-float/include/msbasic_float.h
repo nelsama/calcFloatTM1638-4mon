@@ -182,14 +182,4 @@ void fp_save_fac(msbasic_float_t *dest);
  */
 void fp_clear_fac(void);
 
-/* ============================================================================
- * TEST (solo para debug)
- * ============================================================================ */
-
-/**
- * Test directo de suma 2+2=4 sin usar punteros
- * Útil para verificar que las rutinas MSBasic funcionan
- */
-void fp_test_direct(void);
-
 #endif /* MSBASIC_FLOAT_H */
