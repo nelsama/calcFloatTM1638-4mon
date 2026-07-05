@@ -1,0 +1,9 @@
+# Archivos generados por compilacion
+build/
+output/
+
+# Archivos objeto
+*.o
+
+# Mapas de memoria
+*.map
