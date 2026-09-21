@@ -36,7 +36,7 @@
 #include <string.h>
 #include "romapi.h"
 #include "msbasic_float.h"
-#include "../../libs/tm1638-6502-cc65/include/tm1638.h"
+#include "tm1638.h"
 
 /* ============================================================================
  * HARDWARE
@@ -601,6 +601,10 @@ int main(void) {
     /* Apagar LEDs del hardware (si existen) */
     LEDS = 0xFF;
     
+    /* Configurar el puerto del TM1638 ANTES de tm1638_init().
+     * CLK (bit 0), DIO (bit 1) y STB (bit 2) como salida. */
+    CONF_PORT_SALIDA = 0b00000000;
+
     /* Inicializar TM1638 */
     tm1638_init();
     tm1638_set_brightness(4);  /* Brillo medio (0-7) */

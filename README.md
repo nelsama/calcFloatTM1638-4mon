@@ -127,11 +127,22 @@ El módulo TM1638 es muy económico y ampliamente disponible en plataformas de c
 
 ## Software Requerido
 
-- **CC65** instalado en `D:\cc65` (o ajustar ruta en makefile)
+- **CC65** instalado en `D:\cc65` (o ajustar `CC65_HOME` en el makefile)
 - **Monitor 6502 v2.2.0+** con ROM API
-- **Librería TM1638** en `../../libs/tm1638-6502-cc65`
+- **Librería TM1638** en `../libs/tm1638-6502-cc65` (un nivel arriba del proyecto)
   - Repositorio: https://github.com/nelsama/tm1638-6502-cc65
   - Librería de control para el módulo TM1638 (display + teclado)
+
+### Requisitos del entorno
+
+El makefile usa sintaxis POSIX, por lo que necesita un shell tipo `sh`/`bash`
+(Git Bash, MSYS2 o WSL) más `make`. No usa `cmd.exe`.
+
+Si cc65 está en otra ruta, sobrescribir sin editar el archivo:
+
+```bash
+make CC65_HOME=/ruta/a/cc65
+```
 
 ## Compilación
 
@@ -141,9 +152,15 @@ make
 
 # Limpiar archivos generados
 make clean
+
+# Ver tamaño del binario
+make info
+
+# Ver mapa de memoria
+make map
 ```
 
-El binario se genera en `output/calc-float.bin` (~13KB)
+El binario se genera en `output/calc-float.bin` (~13 KB)
 
 ## Instalación y Uso
 
